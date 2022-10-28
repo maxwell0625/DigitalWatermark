@@ -1,0 +1,178 @@
+% -*- coding: UTF-8 -*-
+%!TEX program = xelatex
+\documentclass[a4paper,zihao=5,UTF8]{ctexart}
+
+% 设置section标题居左
+\CTEXsetup[format={\heiti\zihao{3}\bfseries}]{section}
+\setcounter{section}{-1}
+\CTEXsetup[format={\heiti\zihao{-3}\bfseries}]{subsection}
+\usepackage{array}
+\usepackage{multicol}
+%数学包，这里没用到
+%\usepackage{amsmath}
+\usepackage{indentfirst}
+%添加作者信息
+\usepackage{authblk}
+\usepackage{graphicx}
+
+% 三线表
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{lscape}
+
+\usepackage{booktabs}
+%设置标题字体，因为section一般为粗体。
+\usepackage{fontspec}
+\setCJKmainfont[BoldFont=KaiTi]{SimSun}
+
+\usepackage{titlesec}
+\usepackage{float}
+\usepackage{appendix}
+% \newfontfamily\sectionef{heiti}
+\usepackage{graphicx}
+\graphicspath{ {./figures/} }
+\titleformat*{\section}{\zihao{3}\heiti}
+\titleformat*{\subsection}{\zihao{-3}\bfseries\heiti}
+\titleformat*{\subsubsection}{\large}
+
+%页码格式
+\pagestyle{plain}
+%设置书签	
+\usepackage[bookmarks=true,colorlinks,linkcolor=black]{hyperref}
+
+% \usepackage[dvipsnames]{xcolor}%颜色宏包
+\usepackage{listings}
+
+% \lstset{
+%     language = Python,
+%     backgroundcolor = \color{yellow!10},    % 背景色：淡黄
+%     basicstyle = \small\ttfamily,           % 基本样式 + 小号字体
+%     rulesepcolor= \color{gray},             % 代码块边框颜色
+%     breaklines = true,                  % 代码过长则换行
+%     %numbers = left,                     % 行号在左侧显示
+%     %numberstyle = \small,               % 行号字体
+%     keywordstyle = \color{blue},            % 关键字颜色
+%     commentstyle =\color{green!100},        % 注释颜色
+%     stringstyle = \color{red!100},          % 字符串颜色
+%     frame =  tb,                  % 用（带影子效果）方框框住代码块
+%     showspaces = false,                 % 不显示空格
+%     columns = fixed,                    % 字间距固定
+% }
+
+%英文摘要
+\newcommand{\enabstractname}{}
+\newenvironment{enabstract}{%
+\quotation
+	\par\small
+	\mbox{}\hfill{\bfseries \enabstractname}\hfill\mbox{}\par
+	\vskip 2.5ex}{\par\vskip 2.5ex} 
+
+\title{\Large\CJKfamily{zhkai} plaintext}	
+\author{
+        \zihao{-4}
+        辛正非$^2$\quad 
+    }
+\affil{（
+    \zihao{-5}
+    {上海第二工业大学\quad{}上海\quad{}201209} 
+）}					   								
+\date{}
+
+% 页边距
+\usepackage{geometry}
+\geometry{a4paper, scale=0.9}
+
+\begin{document}
+	\maketitle
+	{
+		% \footnotetext[1]{清华大学在读研究生。
+		% }
+	}
+    
+    \noindent\zihao{-5}\heiti{%不平衡双栏
+        \>摘要：
+    }
+    \zihao{-5}\songti{
+        plaintext
+    }
+
+    \noindent\zihao{-5}\heiti{
+        关键字：
+    }
+    \zihao{-5}\songti{
+        
+    }
+
+\section{概述}
+
+\subsection{数字水印}
+
+\subsection{评价方式}
+
+\subsection{实现方式}
+
+\section{算法实现}
+
+\subsection{最低有效位算法}
+
+\subsection{随机间隔算法}
+
+\subsection{区域校验位算法}
+
+\section{结果分析与对比}
+
+\section{基于RPC提供加解密服务}
+
+\section{总结}
+
+\begin{thebibliography}{10}
+
+% \bibitem{ref1}
+% 窦茂伟,张宝明. 电商平台退货的动态博弈分析[J]. 电子商务,2019,(06):47-48.
+
+% \bibitem{ref2}
+% 张璨璨. 服装业逆向物流的现状及对策分析[J]. 商场现代化,2019,(10):55-56.
+
+% \bibitem{ref3}
+% 姬雅帅. 关于逆向物流的博弈分析[J]. 农业装备与车辆工程,2017,55(08):84-87.
+
+% \bibitem{ref4}
+% 尚月. 电商环境下逆向物流存在的问题及解决方案[J]. 农村经济与科技,2017,28(14):76+78.
+
+% \bibitem{ref5}
+% 王文哲,杨锐锐. B2C环境下退货逆向物流研究[J]. 湖北工程学院学报,2016,36(05):102-105.
+
+\end{thebibliography}
+
+\begin{center}
+    \Large{
+        \textbf{
+            Title in English
+        }
+    }
+
+    \zihao{5}{
+        Zhengfei Xin\quad 
+    }
+    
+    \zihao{-5}{
+        \emph{
+            Shanghai Polytechnic University\quad{}Shanghai\quad{}201209
+        }
+    } 
+\end{center}
+
+\noindent\zihao{-5}\heiti{
+    \textbf{Abstract:}
+}
+\zihao{-5}\songti{
+
+}
+
+\noindent\zihao{-5}\heiti{
+    \textbf{Keywords:}
+}
+\zihao{-5}\songti{
+    
+}
+\end{document}

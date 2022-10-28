@@ -1,0 +1,26 @@
+syntax = "proto3";
+package server;
+
+service DigitalWatermark {
+    rpc Encrypt(EncryptAction) returns (EncryptResponse);
+    rpc Decrypt(DecryptAction) returns (DecryptResponse);
+}
+
+message EncryptAction {
+    bytes img = 1;
+    bytes secret = 2;
+}
+
+message EncryptResponse {
+    bool success = 1;
+    bytes result = 2;
+}
+
+message DecryptAction {
+    bytes img = 1;
+}
+
+message DecryptResponse {
+    bool success = 1;
+    bytes result = 2;
+}

@@ -2,3 +2,7 @@ encrypted.jpg
 decrypted.py
 test.py
 *.pyc
+*.aux
+*.log
+*.out
+*.gz
